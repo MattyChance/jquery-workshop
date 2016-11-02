@@ -1,1 +1,28 @@
 /* Write your code here */
+.announcement {
+	border: 0.2em solid pink;
+    padding: 2em;
+    background-color: powderblue;
+    position: relative;
+}
+.announcement button {
+	position: absolute;
+	top: 0;
+    right: 0;
+    border: none;
+    background-color: pink;
+    color: white;
+    cursor: pointer;
+}
+/*.announcement button {
+    content: 'X';
+}*/
+
+
+/*.announcement p .display {
+	display: relative;
+}*/
+.hide p {
+	display: none;
+}
+
