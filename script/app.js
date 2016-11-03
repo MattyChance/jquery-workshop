@@ -1,24 +1,7 @@
 /* Write your code here! */
-// var mq = window.matchMedia("(min-width: 500px)");
-
-// console.log(mq);
-if (matchMedia) {
-  var mq = window.matchMedia("(min-width: 500px)");
-  mq.addListener(WidthChange);
-  WidthChange(mq);
-}
-
-function WidthChange(mq) {
-  if (mq.matches) {
-    // window width is at least 500px
-    	$('.container').addClass('content');
-    	$(document).ready(function(){
-			$("aside form").sticky({topSpacing:0});
-			});
-
-  } else {
-    // window width is less than 500px
-    	$('.container').removeClass('content');
-	  	$("aside form").unstick();
-  }
-}
+$.getJSON('https://maps.googleapis.com/maps/api/geocode/json?address=montreal')
+.then(function(res) {
+  console.log(res.results[0].geometry.location);
+  $('h1').after('<p class="jsonLoc">You location is: ' + JSON.stringify(res.results[0].geometry.location) + '</p>');
+  $('.jsonLoc').addClass('location');
+});
