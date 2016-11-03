@@ -1,4 +1,5 @@
 /* Write your code here! */
+<<<<<<< Updated upstream
 // $('li').click(function () {
 
 // 	$(this).parent().parent().toggleClass('overlay');
@@ -18,3 +19,6 @@ $('img').click(function(){
 
 });
 
+=======
+$("#sticker").sticky({topSpacing:0});
+>>>>>>> Stashed changes

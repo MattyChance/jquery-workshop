@@ -1,4 +1,5 @@
 /* Write your code here */
+<<<<<<< Updated upstream
 ul {
 	padding: 0;
 }
@@ -39,4 +40,19 @@ img {
 
 @media only screen and (min-width: 1025px) {
 
+=======
+.content {
+   display: flex;
+}
+
+aside {
+    width: 30%;
+    padding: 1em;
+}
+
+aside form {
+	border: 0.3em solid pink;
+	text-align: center;
+	padding-bottom: 1em;
+>>>>>>> Stashed changes
 }
