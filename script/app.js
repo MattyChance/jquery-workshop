@@ -1,24 +1,25 @@
 /* Write your code here! */
-// var mq = window.matchMedia("(min-width: 500px)");
-
-// console.log(mq);
-if (matchMedia) {
-  var mq = window.matchMedia("(min-width: 500px)");
-  mq.addListener(WidthChange);
-  WidthChange(mq);
+function checkInput (name, pw1, pw2) {
+	if (name === "") {
+		alert('Please enter a user name!')
+	} 
+	else if (pw2 !== pw1) {
+		alert('Please make sure you type in the same password!')
+	}
+	else {
+		alert('Thanks!')
+	}
 }
 
-function WidthChange(mq) {
-  if (mq.matches) {
-    // window width is at least 500px
-    	$('.container').addClass('content');
-    	$(document).ready(function(){
-			$("aside form").sticky({topSpacing:0});
-			});
 
-  } else {
-    // window width is less than 500px
-    	$('.container').removeClass('content');
-	  	$("aside form").unstick();
-  }
-}
+
+
+
+$('#signup-form').on('submit', function(e) {
+	var userName = $('.user').val();
+    var password = $('.pw').val();
+    var confirmedPw = $('.cfmPW').val();
+	e.preventDefault();
+	checkInput(userName, password, confirmedPw);
+	//alert('you just submit');
+});
