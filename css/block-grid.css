@@ -1,0 +1,80 @@
+html {
+  box-sizing: border-box;
+}
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+.responsive-img {
+  max-width: 100%;
+}
+
+ul.block-grid {
+  display: flex; /* display elements next to each other */
+  flex-wrap: wrap;
+  list-style: none; /* disable bullets on the LI items */
+  padding-left: 0; /* reset the browser extra padding on UL elements */
+}
+
+ul.block-grid li {
+  padding: 2em; /* Adding a 10px padding on a 100% width would not work if it wasn't for box-sizing: border-box! */
+}
+
+ul.block-grid-sm2 > li {
+  width: 50%;
+}
+ul.block-grid-sm3 > li {
+  width: 33.333%;
+}
+ul.block-grid-sm4 > li {
+  width: 25%;
+}
+.block-grid-sm5 > li {
+  width: 20%;
+}
+.block-grid-sm6 > li {
+  width: 16.666%;
+}
+
+@media screen and (min-width: 641px) {
+  ul.block-grid-md2 > li {
+    width: 50%;
+  }
+  ul.block-grid-md3 > li {
+    width: 33.333%;
+  }
+  ul.block-grid-md4 > li {
+    width: 25%;
+  }
+  .block-grid-md5 > li {
+    width: 20%;
+  }
+  .block-grid-md6 > li {
+    width: 16.666%;
+  }
+
+
+}
+
+@media screen and (min-width: 1025px) {
+  ul.block-grid-lg2 > li {
+    width: 50%;
+  }
+  ul.block-grid-lg3 > li {
+    width: 33.333%;
+  }
+  ul.block-grid-lg4 > li {
+    width: 25%;
+  }
+  .block-grid-lg5 > li {
+    width: 20%;
+  }
+  .block-grid-lg6 > li {
+    width: 16.666%;
+  }
+  p {
+    font-size: 1.2em;
+  }
+  
+}
+
