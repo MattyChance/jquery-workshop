@@ -1,24 +1,24 @@
 /* Write your code here! */
-<<<<<<< Updated upstream
-// $('li').click(function () {
+// var mq = window.matchMedia("(min-width: 500px)");
 
-// 	$(this).parent().parent().toggleClass('overlay');
-// })
+// console.log(mq);
+if (matchMedia) {
+  var mq = window.matchMedia("(min-width: 500px)");
+  mq.addListener(WidthChange);
+  WidthChange(mq);
+}
 
-$('img').click(function(){
-	var imgAlt = $(this).attr('alt');
-	var imgSrc = $(this).attr('src');
-	console.log(imgSrc);
-	console.log(imgAlt);
-	$('.overlay img').attr('src', imgSrc);
-	$('.image-caption').text(imgAlt);
-	$('.overlay').addClass('show');
-	$('.overlay').click(function() {
-		$(this).removeClass('show');
-	});
+function WidthChange(mq) {
+  if (mq.matches) {
+    // window width is at least 500px
+    	$('.container').addClass('content');
+    	$(document).ready(function(){
+			$("aside form").sticky({topSpacing:0});
+			});
 
-});
-
-=======
-$("#sticker").sticky({topSpacing:0});
->>>>>>> Stashed changes
+  } else {
+    // window width is less than 500px
+    	$('.container').removeClass('content');
+	  	$("aside form").unstick();
+  }
+}
